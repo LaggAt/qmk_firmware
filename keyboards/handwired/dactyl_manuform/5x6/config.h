@@ -28,3 +28,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // WS2812 RGB LED strip input and number of LEDs
 #define RGB_DI_PIN D3
 #define RGBLED_NUM 12
+
+// add joystick as pointing device (mouse)
+//#define ANALOG_JOYSTICK_X_AXIS_PIN F5
+//#define ANALOG_JOYSTICK_Y_AXIS_PIN F4
+//#define ANALOG_JOYSTICK_CLICK_PIN D2
+
+// rotary encoder (volume control)
+#define ENCODERS_PAD_A { F4 }
+#define ENCODERS_PAD_B { F5 }
