@@ -18,22 +18,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-
 // wiring of each half
 #define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B5 }
 #define MATRIX_ROW_PINS { F6, F7, B1, B3, B2, B6 }
 
+// COL2ROW means the black mark on your diode is facing to the rows, and between the switch and the rows.
 #define DIODE_DIRECTION COL2ROW
 
-// WS2812 RGB LED strip input and number of LEDs
+// left side: side with USB Power is Master/Left
+#define MASTER_LEFT
+
+// both sides: WS2812 RGB LED strip input and number of LEDs (one behind each key)
 #define RGB_DI_PIN D3
-#define RGBLED_NUM 12
+#define RGBLED_NUM 64
+#define RGBLED_SPLIT { 32, 32 }
 
-// add joystick as pointing device (mouse)
-//#define ANALOG_JOYSTICK_X_AXIS_PIN F5
-//#define ANALOG_JOYSTICK_Y_AXIS_PIN F4
-//#define ANALOG_JOYSTICK_CLICK_PIN D2
+// right side: add joystick as pointing device (mouse)
+#define SPLIT_POINTING_ENABLE
+#define POINTING_DEVICE_RIGHT
+#define ANALOG_JOYSTICK_X_AXIS_PIN F5
+#define ANALOG_JOYSTICK_Y_AXIS_PIN F4
+#define ANALOG_JOYSTICK_CLICK_PIN D2
 
-// rotary encoder (volume control)
+// left side: rotary encoder (volume control, what else?)
 #define ENCODERS_PAD_A { F4 }
 #define ENCODERS_PAD_B { F5 }
+#define ENCODER_RESOLUTIONS { 1 }
+#define ENCODERS_PAD_A_RIGHT { }
+#define ENCODERS_PAD_B_RIGHT { }
+#define ENCODER_RESOLUTIONS_RIGHT { }
+// encoder uses "key" L50 for rotary click (see 5x6.h)

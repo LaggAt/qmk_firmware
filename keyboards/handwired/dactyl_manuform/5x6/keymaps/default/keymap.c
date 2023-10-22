@@ -7,6 +7,8 @@
 #define RAISE MO(_RAISE)
 #define LOWER MO(_LOWER)
 
+//TODO RGB lightning Key Codes? https://docs.qmk.fm/#/feature_rgblight?id=keycodes
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT_5x6(
         KC_ESC , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                         KC_6  , KC_7  , KC_8  , KC_9  , KC_0  ,KC_BSPC,
@@ -16,7 +18,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          KC_LBRC,KC_RBRC,                                                       KC_PLUS, KC_EQL,
                                          RAISE ,KC_SPC,                          KC_ENT,  LOWER,
                                          KC_TAB,KC_HOME,                         KC_END,  KC_DEL,
-                                         KC_BSPC, KC_GRV,                        KC_LGUI, KC_LALT
+                                         KC_BSPC, KC_GRV,                        KC_LGUI, KC_LALT,
+                _______
     ),
 
     [_LOWER] = LAYOUT_5x6(
@@ -27,8 +30,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                 _______,KC_PSCR,            _______, KC_P0,
                                                 _______,_______,            _______,_______,
                                                 _______,_______,            _______,_______,
-                                                _______,_______,            _______,_______
-
+                                                _______,_______,            _______,_______,
+                _______
     ),
 
     [_RAISE] = LAYOUT_5x6(
@@ -39,7 +42,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                   _______,_______,            KC_EQL ,_______,
                                                   _______,_______,            _______,_______,
                                                   _______,_______,            _______,_______,
-                                                  _______,_______,            QK_BOOT, EE_CLR
+                                                  _______,_______,            QK_BOOT, EE_CLR,
+                _______
     )
 
 };

@@ -13,8 +13,8 @@ AUDIO_ENABLE = no           # Audio output
 SPLIT_KEYBOARD = yes
 
 # add joystick as pointing device (mouse)
-# POINTING_DEVICE_ENABLE = yes
-# POINTING_DEVICE_DRIVER = analog_joystick
+POINTING_DEVICE_ENABLE = yes
+POINTING_DEVICE_DRIVER = analog_joystick
 
 # rotary encoder (volume control)
 ENCODER_ENABLE = yes
